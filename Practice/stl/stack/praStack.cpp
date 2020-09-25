@@ -43,3 +43,25 @@ int main(){
     system("pause");
     return 0;
 }
+
+/*
+run result
+————————————
+1.in stack:
+    push()=0
+    push()=1
+    push()=2
+    push()=3
+    push()=4
+2.empty()=false
+3.top()=4
+4.popped an element
+    new top()=3
+5.size()=4
+6.out stack:
+    top()=3
+    top()=2
+    top()=1
+    top()=0
+————————————
+*/
