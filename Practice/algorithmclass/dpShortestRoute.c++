@@ -5,7 +5,6 @@ using namespace std;
 
 int main()
 {
-    
 
     // 邻接矩阵构造图
     int graph[NODE_NUM][NODE_NUM] = {
@@ -22,6 +21,7 @@ int main()
 
     // 每一个节点最短路径中的前驱节点
     int preNode[NODE_NUM];
+
     // 每一个节点的最短路消耗
     int perNodeShortestCost[NODE_NUM];
 
@@ -58,6 +58,7 @@ int main()
          << " preNode"
          << " "
          << " mincost" << endl;
+         
     for (int i = 0; i < NODE_NUM; i++)
     {
         cout << i + 1 << "       " << preNode[i] + 1 << "      " << perNodeShortestCost[i] << endl;
@@ -66,13 +67,15 @@ int main()
     //10号节点
     cout << "10号节点的最短路径为：" << perNodeShortestCost[9] << endl;
     cout << "它的路径是：10";
+
     int i = 9;
     while (preNode[i])
     {
         cout << "<-" << preNode[i] + 1;
         i = preNode[i];
     }
-    cout<<"<-"<<preNode[0]+1;
+
+    cout << "<-" << preNode[0] + 1;
     cout << endl;
 
     system("pause");
