@@ -1,0 +1,12 @@
+BEGIN
+s:=a+8;
+IF  x>5 
+THEN
+x:=5;
+ELSE
+x:=6;
+WHILE a>5  DO
+BEGIN
+a:=a+5;
+END 
+END

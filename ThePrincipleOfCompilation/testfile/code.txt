@@ -1,0 +1,13 @@
+now := 1;
+last := 1;
+i := 5;
+WHILE i >= 0 DO
+// test
+/*adsf*/
+BEGIN
+	last := now +1;
+	IF now <= 1 THEN
+		last := last+2;
+	i := i-1;
+END 
+	

@@ -1,0 +1,46 @@
+# Project: project_word
+# Makefile created by Dev-C++ 5.15
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o link.o word.o sentence.o id_table.o semantics.o show.o
+LINKOBJ  = main.o link.o word.o sentence.o id_table.o semantics.o show.o
+LIBS     = -L"F:/Dev-Cpp/TDM-GCC-64/lib" -L"F:/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"F:/Dev-Cpp/TDM-GCC-64/include" -I"F:/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"F:/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"F:/Dev-Cpp/TDM-GCC-64/include" -I"F:/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"F:/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"F:/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = project_word.exe
+CXXFLAGS = $(CXXINCS) -std=c99 -g3
+CFLAGS   = $(INCS) -std=c99 -g3
+RM       = del /q
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+link.o: link.c
+	$(CC) -c link.c -o link.o $(CFLAGS)
+
+word.o: word.c
+	$(CC) -c word.c -o word.o $(CFLAGS)
+
+sentence.o: sentence.c
+	$(CC) -c sentence.c -o sentence.o $(CFLAGS)
+
+id_table.o: id_table.c
+	$(CC) -c id_table.c -o id_table.o $(CFLAGS)
+
+semantics.o: semantics.c
+	$(CC) -c semantics.c -o semantics.o $(CFLAGS)
+
+show.o: show.c
+	$(CC) -c show.c -o show.o $(CFLAGS)
